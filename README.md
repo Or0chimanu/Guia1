@@ -1,4 +1,4 @@
-Por lo que estuve viendo, las buenas practicas de github cuando trabajas con github es subir solamente los arhcivos .c, y librerias entonces tenes que recompilar los archivos si los queres probar.
+Por lo que estuve viendo, las buenas practicas de github cuando trabajas con C es subir solamente los arhcivos .c, y librerias entonces tenes que recompilar los archivos si los queres probar.
 
 Cuando queres hacer un commit lo que suele hacerse es lo siguiente. En linea de comandos:
 git add . \\(Esto agrega todos los archivos que fueron actualizados, tambien podes escribir el nombre del archivo que queres subir)
