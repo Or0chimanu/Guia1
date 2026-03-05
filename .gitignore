@@ -1,0 +1,19 @@
+# Ejecutables
+*.exe
+
+# Archivos objeto
+*.obj
+
+# Archivos de linking incremental
+*.ilk
+
+# Archivos de debug
+*.pdb
+vc*.pdb
+
+# Carpetas de VSCode
+.vscode/
+
+# Archivos temporales
+*.log
+*.tmp
