@@ -4,11 +4,10 @@
 typedef struct nodo{
     nodo *siguiente;
     nodo *anterior;
-    char nodo[50];
+    char *palabra;
 } nodo;
 
-nodo crear_nodo(char palabra[50]);
-
+nodo crear_nodo(char *palabra);
 
 typedef struct lista{
     nodo *nodoinicial;
@@ -16,6 +15,6 @@ typedef struct lista{
 }lista;
 
 lista pop(lista a);
-lista add(lista a,char palabra[50]);
+lista add(lista a,char *palabra);
 
 #endif // Lists
