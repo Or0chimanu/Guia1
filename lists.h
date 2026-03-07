@@ -17,7 +17,8 @@ typedef struct lista{
 
 lista* crear_lista(nodo *nodo_inicial);
 
-lista* pop(lista *l);
+
 lista* push(lista *l,nodo *n);
+nodo* pop(lista *l);
 
 #endif // Lists
