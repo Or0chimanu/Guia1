@@ -7,6 +7,9 @@ typedef struct nodo{
     char nodo[50];
 } nodo;
 
+nodo crear_nodo(char palabra[50]);
+
+
 typedef struct lista{
     nodo *nodoinicial;
     nodo *nodofinal;
