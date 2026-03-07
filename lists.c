@@ -15,6 +15,13 @@ nodo* crear_nodo(char *pal){
 
 }
 
+lista* crear_lista(nodo *nodo_inicial){
+    lista *l = malloc(sizeof *l);
+    if (l == NULL){puts("Falla en la creacion de la lista");return NULL;}
+    l->nodoinicial = nodo_inicial;
+    l->nodofinal = nodo_inicial;
+    return l;
+}
 lista pop(lista a){
     nodo final
 
