@@ -13,6 +13,6 @@ typedef struct lista{
 }lista;
 
 lista pop(lista a);
-lista add(lista a,char palabra[]);
+lista add(lista a,char palabra[50]);
 
 #endif // Lists
