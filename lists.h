@@ -8,8 +8,8 @@ typedef struct nodo{
 } nodo;
 
 typedef struct lista{
-    nodo nodoinicial;
-    nodo nodofinal;
+    nodo *nodoinicial;
+    nodo *nodofinal;
 }lista;
 
 lista pop(lista a);
