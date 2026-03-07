@@ -4,11 +4,12 @@
 typedef struct nodo{
     char *siguiente;
     char *anterior;
-    char nodo[];
+    char nodo[50];
 } nodo;
 
 typedef struct lista{
     nodo nodoinicial;
+    nodo nodofinal;
 }lista;
 
 lista pop(lista a);
