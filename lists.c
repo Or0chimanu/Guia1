@@ -3,7 +3,7 @@
 #include <string.h>
 #include "lists.h"
 
-nodo* crear_nodo(char *pal){
+nodo* crear_nodo(char pal[]){
     nodo *n = malloc(sizeof *n);
     if (n == NULL){puts("Fallo la creacion de un nodo");return NULL;}
     n->siguiente = NULL;
@@ -24,10 +24,7 @@ lista* crear_lista(nodo *nodo_inicial){
     nodo_inicial->siguiente = NULL;
     return l;
 }
-lista* pop(lista a){
-    nodo final
 
-}
 
 lista* push(lista *l,nodo *n){
     if (n == NULL){puts("Para que agregas un nodo vacio?");return l;}
@@ -43,4 +40,27 @@ lista* push(lista *l,nodo *n){
     l->nodofinal = n;}
     n->siguiente = NULL;
     return l;
+}
+
+void pop(lista *l,char *buffer,size_t buffer_size){
+    if(buffer == NULL){puts("No se puede popear la lista porque no hay un buffer adecuado");return;}
+    if(l==NULL){puts("No podes popear una lista que no existe");return;}
+    if(l->nodofinal == NULL){puts("La lista ya esta vacia, no se puede popear");return;}
+    
+    nodo* aux = l->nodofinal;
+    if(strlen(aux->palabra) + 1 > buffer_size){puts("El buffer es demasiado chico para almacenar el pop");return;}
+    strcpy(buffer,aux->palabra);
+    if(l->nodofinal == l->nodoinicial){
+        
+        l->nodoinicial = NULL;
+        l->nodofinal = NULL;
+        free(aux->palabra);
+        free(aux);
+        puts("La lista ahora esta vacia");
+        return;
+    }
+    l->nodofinal = aux->anterior;
+    l->nodofinal->siguiente = NULL;
+    free(aux->palabra);
+    free(aux);
 }

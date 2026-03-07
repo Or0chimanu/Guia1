@@ -7,7 +7,7 @@ typedef struct nodo{
     char *palabra;
 } nodo;
 
-nodo* crear_nodo(char *pal);
+nodo* crear_nodo(char pal[]);
 
 
 typedef struct lista{
@@ -19,6 +19,6 @@ lista* crear_lista(nodo *nodo_inicial);
 
 
 lista* push(lista *l,nodo *n);
-char pop(lista *l);
+void pop(lista *l,char *buffer,size_t buffer_size);
 
 #endif // Lists
