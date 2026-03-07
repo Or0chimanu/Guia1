@@ -19,6 +19,6 @@ lista* crear_lista(nodo *nodo_inicial);
 
 
 lista* push(lista *l,nodo *n);
-nodo* pop(lista *l);
+char pop(lista *l);
 
 #endif // Lists
