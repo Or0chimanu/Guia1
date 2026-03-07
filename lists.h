@@ -9,10 +9,13 @@ typedef struct nodo{
 
 nodo* crear_nodo(char *pal);
 
+
 typedef struct lista{
     nodo *nodoinicial;
     nodo *nodofinal;
 }lista;
+
+lista* crear_lista();
 
 lista pop(lista a);
 lista add(lista a,char *palabra);
