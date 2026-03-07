@@ -22,13 +22,23 @@ lista* crear_lista(nodo *nodo_inicial){
     l->nodofinal = nodo_inicial;
     return l;
 }
-lista pop(lista a){
+lista* pop(lista a){
     nodo final
 
 }
 
-lista push(lista *l,nodo *n){
-    
-
-
+lista* push(lista *l,nodo *n){
+    if (n == NULL){puts("Para que agregas un nodo vacio?");return l;}
+    if (l == NULL){return crear_lista(n);}
+    if(l->nodofinal == NULL){
+        l->nodoinicial = n;
+        l->nodofinal = n;
+        n->anterior = NULL;
+    }
+    else{
+    l->nodofinal->siguiente = n;
+    n->anterior = l->nodofinal;
+    l->nodofinal = n;}
+    n->siguiente = NULL;
+    return l;
 }
