@@ -27,9 +27,8 @@ lista pop(lista a){
 
 }
 
-lista add(lista a,char *palabra){
-    nodo 
-    malloc()
+lista push(lista *l,nodo *n){
+    
 
 
 }
