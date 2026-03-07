@@ -2,8 +2,8 @@
 #define lists
 
 typedef struct nodo{
-    char *siguiente;
-    char *anterior;
+    nodo *siguiente;
+    nodo *anterior;
     char nodo[50];
 } nodo;
 
