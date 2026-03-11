@@ -64,3 +64,15 @@ void pop(lista *l,char *buffer,size_t buffer_size,int print){
     free(aux->palabra);
     free(aux);
 }
+
+int size_lista(lista *l){
+    if (l == NULL){return -1;}
+    if (l->nodoinicial == NULL){return 0;}
+    nodo *n = l->nodoinicial;
+    int i = 1;
+    while(n->siguiente != NULL){
+        i++;
+        n = n->siguiente;
+    }
+    return i;
+}
