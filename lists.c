@@ -42,13 +42,12 @@ lista* push(lista *l,nodo *n){
     return l;
 }
 
-void pop(lista *l,char *buffer,size_t buffer_size){
-    if(buffer == NULL){puts("No se puede popear la lista porque no hay un buffer adecuado");return;}
-    if(l==NULL){puts("No podes popear una lista que no existe");return;}
-    if(l->nodofinal == NULL){puts("La lista ya esta vacia, no se puede popear");return;}
-    
-    nodo* aux = l->nodofinal;
-    if(strlen(aux->palabra) + 1 > buffer_size){puts("El buffer es demasiado chico para almacenar el pop");return;}
+void pop(lista *l,char *buffer,size_t buffer_size,int print){
+    if(buffer == NULL){if(print){puts("No se puede popear la lista porque no hay un buffer adecuado");}return;}
+    if(l==NULL){if(print){puts("No podes popear una lista que no existe");}return;}
+    if(l->nodofinal == NULL){if(print){puts("La lista ya esta vacia, no se puede popear");}return;}
+    nodo *aux = l->nodofinal;
+    if(strlen(aux->palabra) + 1 > buffer_size){if(print){puts("El buffer es demasiado chico para almacenar el pop");}return;}
     strcpy(buffer,aux->palabra);
     if(l->nodofinal == l->nodoinicial){
         
@@ -56,7 +55,8 @@ void pop(lista *l,char *buffer,size_t buffer_size){
         l->nodofinal = NULL;
         free(aux->palabra);
         free(aux);
-        puts("La lista ahora esta vacia");
+        if(print){
+        puts("La lista ahora esta vacia");}
         return;
     }
     l->nodofinal = aux->anterior;

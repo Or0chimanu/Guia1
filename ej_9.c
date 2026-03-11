@@ -40,7 +40,7 @@ void upper(char *string){
     }  
 }
 
-int main()
+int main(void)
 {
     char nombre[10];
 

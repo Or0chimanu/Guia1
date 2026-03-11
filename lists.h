@@ -19,6 +19,6 @@ lista* crear_lista(nodo *nodo_inicial);
 
 
 lista* push(lista *l,nodo *n);
-void pop(lista *l,char *buffer,size_t buffer_size);
+void pop(lista *l,char *buffer,size_t buffer_size,int print);
 
 #endif // Lists
