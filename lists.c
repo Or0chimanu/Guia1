@@ -15,7 +15,8 @@ nodo* crear_nodo(char pal[]){
 
 }
 
-lista* crear_lista(nodo *nodo_inicial){
+lista* crear_lista(char *palabra){
+    nodo *nodo_inicial = crear_nodo(palabra);
     lista *l = malloc(sizeof *l);
     if (l == NULL){puts("Falla en la creacion de la lista");return NULL;}
     l->nodoinicial = nodo_inicial;
@@ -26,19 +27,20 @@ lista* crear_lista(nodo *nodo_inicial){
 }
 
 
-lista* push(lista *l,nodo *n){
+lista* push(lista *l,char *n){
     if (n == NULL){puts("Para que agregas un nodo vacio?");return l;}
     if (l == NULL){return crear_lista(n);}
+    nodo *new = crear_nodo(n);
     if(l->nodofinal == NULL){
-        l->nodoinicial = n;
-        l->nodofinal = n;
-        n->anterior = NULL;
+        l->nodoinicial = new;
+        l->nodofinal = new;
+        new->anterior = NULL;
     }
     else{
-    l->nodofinal->siguiente = n;
-    n->anterior = l->nodofinal;
-    l->nodofinal = n;}
-    n->siguiente = NULL;
+    l->nodofinal->siguiente = new;
+    new->anterior = l->nodofinal;
+    l->nodofinal = new;}
+    new->siguiente = NULL;
     return l;
 }
 

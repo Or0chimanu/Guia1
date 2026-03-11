@@ -4,15 +4,15 @@
 
 int main(void){
 
-    nodo *a = crear_nodo("Hola");
-    nodo *b = crear_nodo("Manu");
+    char *a = "Hola";
+    char *b = "Chau";
 
     int i = 0;
     char buffer[100];
 
     lista *l = crear_lista(a);
-    
     push(l,b);
+
    
     
     for (i = 0; i < 2;i++){

@@ -15,10 +15,10 @@ typedef struct lista{
     nodo *nodofinal;
 }lista;
 
-lista* crear_lista(nodo *nodo_inicial);
+lista* crear_lista(char *palabra);
 
 
-lista* push(lista *l,nodo *n);
+lista* push(lista *l,char *n);
 void pop(lista *l,char *buffer,size_t buffer_size,int print);
 int size_lista(lista *l);
 
